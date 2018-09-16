@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Trivia Game</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <style>
+    .question1 {
+      opacity: 0;
+    }
+    .question2{
+      opacity: 0;
+    }
+    .question3{
+      opacity: 0;
+    }
+    .question4{
+      opacity: 0;
+    }
+    .question5{
+      opacity: 0;
+    }
+    .images {
+      height: 200px;
+      width: auto;
+    }
+    .scores {
+      opacity: 0;
+    }
+    body {
+      background-image: url("https://i1.wp.com/barbarconan.cz/wp-content/uploads/2014/11/Conan-the-Barbarian-Wallpaper-11.jpg");
+      color: white;
+    }
+    h1 {
+      text-align: center;
+      top:10%;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+      <h1>Arnold Quote Trivia!</h1>
+      <br>
+      <br>
+      <br>
+    <div class="row">
+      <h4 id="start-text">Match the Arnold quote to the correct movie.  You have 60 seconds.  Answer as many as you can.</h4>
+    </div>
+    <div class="row">
+      <!--Start Button and instructions-->
+      <button type="button" id="start-button" class="btn btn-primary btn-lg">START!</button>
+    </div>
+    <!--Scores-->
+    <div class="row scores">
+      <div class="col-md-4">
+        <p>Correct Answers</p>
+        <!--Populates correct answers-->
+        <div class="correct-answers"></div>
+      </div>
+      <div class="col-md-4">
+        <p>Incorrect Answers</p>
+        <!--populates incorrect answers-->
+        <div class="wrong-answers"></div>
+      </div>
+      <div class="col-md-4">
+        <p>Unanswered Questions</p>
+        <!--populates unanswered-->
+        <div class="un-answered"></div>
+      </div>
+    </div>
+    <div class="row question1">
+      <p>1. "Hasta la vista, baby."</p>
+    </div>
+    <div class="row question1 answers1">
+      <div class="form-check form-check-inline">
+        <input class="form-check-input correct-answer1" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+        <label class="form-check-label" for="inlineRadio1">Terminator 2</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input incorrect-answer1" type="radio" name="inlineRadioOptions" id="inlineRadio2"
+          value="option2">
+        <label class="form-check-label" for="inlineRadio2">Hercules in New York</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input incorrect-answer1" type="radio" name="inlineRadioOptions" id="inlineRadio3"
+          value="option3">
+        <label class="form-check-label" for="inlineRadio3">End of Days</label>
+      </div>
+    </div>
+    <div class="row question2">
+      <p>2. "You hit like a vegitarian."</p>
+    </div>
+    <div class="row question2 answers2">
+      <div class="form-check form-check-inline">
+        <input class="form-check-input incorrect-answer2" type="radio" name="inlineRadioOptions" id="inlineRadio1"
+          value="option1">
+        <label class="form-check-label" for="inlineRadio1">Commando</label>
+      </div>
+      <div class="form-check form-check-inline correct-answer2">
+        <input class="form-check-input correct-answer" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+        <label class="form-check-label" for="inlineRadio2">Escape Plan</label>
+      </div>
+      <div class="form-check form-check-inline incorrect-answer2">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
+        <label class="form-check-label" for="inlineRadio3">Kindergarten Cop</label>
+      </div>
+    </div>
+    <div class="row question3">
+      <p>3. "You mean you eat other people's lunches? Stop it!"</p>
+    </div>
+    <div class="row question3 answers3">
+      <div class="form-check form-check-inline">
+        <input class="form-check-input incorrect-answer3" type="radio" name="inlineRadioOptions" id="inlineRadio1"
+          value="option1">
+        <label class="form-check-label" for="inlineRadio1">Twins</label>
+      </div>
+      <div class="form-check form-check-inline incorrect-answer3">
+        <input class="form-check-input correct-answer" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+        <label class="form-check-label" for="inlineRadio2">The Last Action Hero</label>
+      </div>
+      <div class="form-check form-check-inline correct-answer3">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
+        <label class="form-check-label" for="inlineRadio3">Kindergarten Cop</label>
+      </div>
+    </div>
+    <div class="row question4">
+      <p>4. "It's not a tumor!"</p>
+    </div>
+    <div class="row question4 answers4">
+    <div class="row question4 answers4">
+      <div class="form-check form-check-inline">
+        <input class="form-check-input incorrect-answer4" type="radio" name="inlineRadioOptions" id="inlineRadio1"
+          value="option1">
+        <label class="form-check-label" for="inlineRadio1">Conan the Barbarian</label>
+      </div>
+      <div class="form-check form-check-inline correct-answer4">
+        <input class="form-check-input correct-answer" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+        <label class="form-check-label" for="inlineRadio2">Kindergarten Cop</label>
+      </div>
+      <div class="form-check form-check-inline incorrect-answer4">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
+        <label class="form-check-label" for="inlineRadio3">Jingle all the Way</label>
+      </div>
+    </div>
+    <div class="row question5 answers5">
+      <div class="form-check form-check-inline">
+        <input class="form-check-input incorrect-answer5" type="radio" name="inlineRadioOptions" id="inlineRadio1"
+          value="option1">
+        <label class="form-check-label" for="inlineRadio1">Commando</label>
+      </div>
+      <div class="form-check form-check-inline correct-answer5">
+        <input class="form-check-input correct-answer" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+        <label class="form-check-label" for="inlineRadio2">Escape Plan</label>
+      </div>
+      <div class="form-check form-check-inline incorrect-answer5">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
+        <label class="form-check-label" for="inlineRadio3">Kindergarten Cop</label>
+      </div>
+    </div>
+    
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script type="text/javascript">
+
+    var correctAnswers = null;
+    var wrongAnswers = null;
+    var unAnswered = 4;
+
+
+    // Variable that will hold the setInterval
+    var timer;
+    var game = {
+      correct: 0,
+      incorrect: 0,
+      counter: 20,
+      countdown: function () {
+        game.counter--;
+        $("#counter-number").html(game.counter);
+        if (game.counter === 0) {
+          console.log("TIME UP");
+          alert("Time Up! Hit reload to play again");
+        }
+      }
+    };
+
+
+    //funcion to render trivia forms
+    function renderTrivia() {
+      //hides start text
+      $("#start-text").hide();
+      //hides start button
+      $("#start-button").hide();
+      //shows scores
+      $(".scores").animate({ opacity: "5" });
+      //shows trivia qs
+      $(".question1").animate({ opacity: "5" });
+      console.log("shit fuck");
+    };
+
+    //function to use render trivia function when button clicked
+    $("#start-button").on("click", function (event) {
+      //prevent default behavior
+      event.preventDefault();
+      //calls render forms function
+      renderTrivia();
+      //starts timer
+      timer = setInterval(game.countdown, 1000);
+    });
+
+    //Q1 correct answer function
+    $(".correct-answer1").on("click", function () {
+      //adds to correct answers
+      correctAnswers++;
+      //subtracts from remaining questions
+      unAnswered--;
+      //creates winning img, adds source
+      var imgWin = $("<img>").attr("src", "terminator-2.gif");
+      //add class to change size with css
+      imgWin.addClass("images");
+      //replaces question with victory
+      $(".question1").empty();
+      $(".question1").append(imgWin);
+      //hides answers when clicked
+      $(".answers1").hide();
+      //shows question 2
+      $(".question2").animate({ opacity: "5" });
+      //updates correct answers to html
+      $(".correct-answers").text(correctAnswers);
+      //updates unanswered
+      $(".un-answered").text(unAnswered);
+      console.log(correctAnswers);
+    });
+
+    //q1 wrong answer function
+    $(".incorrect-answer1").on("click", function () {
+      //adds to wrong answers
+      wrongAnswers++;
+      //subtracts from remaining questions
+      unAnswered--;
+      //creates losing img
+      var imgLose = $("<img>").attr("src", "wrong-answer.gif");
+      imgLose.addClass("images")
+      //replaces question with defeat
+      $(".question1").empty();
+      $(".question1").append(imgLose);
+      //hides answers
+      $(".answers1").hide();
+      //shows question 2
+      $(".question2").animate({ opacity: "5" });
+      //updates wrong answers
+      $(".wrong-answers").text(wrongAnswers);
+      //updates unanswered
+      $(".un-answered").text(unAnswered);
+      console.log(wrongAnswers);
+    });
+
+    //q2 correct answer function
+    $(".correct-answer2").on("click", function () {
+      //adds to correct answers (need to animate q3)
+      correctAnswers++;
+      //subtracts from remaining questions
+      unAnswered--;
+      //creates winning img, adds source
+      var imgWin2 = $("<img>").attr("src", "escape-plan.gif");
+      //add class to change size with css
+      imgWin2.addClass("images");
+      //hide pic from first question
+      $(".question1").hide();
+      //replaces question with victory
+      $(".question2").empty();
+      $(".question2").append(imgWin2);
+      //hides answers when 
+      $(".answers2").hide();
+      //shows question 3
+      $(".question3").animate({ opacity: "5" });
+      //updates correct answers to html
+      $(".correct-answers").text(correctAnswers);
+      //updates unanswered
+      $(".un-answered").text(unAnswered);
+      console.log(correctAnswers);
+    });
+
+    //q2 wrong answer function (need to animate q3)
+    $(".incorrect-answer2").on("click", function () {
+      //adds to wrong answers
+      wrongAnswers++;
+      //subtracts from remaining questions
+      unAnswered--;
+      //creates losing img
+      var imgLose = $("<img>").attr("src", "wrong-answer.gif");
+      imgLose.addClass("images")
+      //hide pic from first question
+      $(".question1").hide();
+      //replaces question with defeat
+      $(".question2").empty();
+      $(".question2").append(imgLose);
+      //hides answers
+      $(".answers2").hide();
+      //shows question 3
+      $(".question3").animate({ opacity: "5" });
+      //updates wrong answers
+      $(".wrong-answers").text(wrongAnswers);
+      //updates unanswered
+      $(".un-answered").text(unAnswered);
+      console.log(wrongAnswers);
+    });
+
+    //q3 correct answer function
+    $(".correct-answer3").on("click", function () {
+      //adds to correct answers (need to animate q3)
+      correctAnswers++;
+      //subtracts from remaining questions
+      unAnswered--;
+      //creates winning img, adds source
+      var imgWin2 = $("<img>").attr("src", "kindergarten-cop.gif");
+      //add class to change size with css
+      imgWin2.addClass("images");
+      //hide pic from first question
+      $(".question2").hide();
+      //replaces question with victory
+      $(".question3").empty();
+      $(".question3").append(imgWin2);
+      //hides answers when 
+      $(".answers3").hide();
+      //question 4 animate
+      $("$.question4").animate({opacity: "5"});
+      //updates correct answers to html
+      $(".correct-answers").text(correctAnswers);
+      //updates unanswered
+      $(".un-answered").text(unAnswered);
+      console.log(correctAnswers);
+    });
+    
+    //incorrect q3
+    $(".incorrect-answer3").on("click", function () {
+      //adds to wrong answers
+      wrongAnswers++;
+      //subtracts from remaining questions
+      unAnswered--;
+      //creates losing img
+      var imgLose = $("<img>").attr("src", "wrong-answer.gif");
+      imgLose.addClass("images")
+      //hide pic from first question
+      $(".question2").hide();
+      //replaces question with defeat
+      $(".question3").empty();
+      $(".question3").append(imgLose);
+      //hides answers
+      $(".answers3").hide();
+      //shows question 3
+      $(".question4").animate({ opacity: "5" });
+      //updates wrong answers
+      $(".wrong-answers").text(wrongAnswers);
+      //updates unanswered
+      $(".un-answered").text(unAnswered);
+      console.log(wrongAnswers);
+    });
+
+    //question4 correct
+    $(".correct-answer4").on("click", function () {
+      //adds to correct answers (need to animate q3)
+      correctAnswers++;
+      //subtracts from remaining questions
+      unAnswered--;
+      //creates winning img, adds source
+      var imgWin2 = $("<img>").attr("src", "kindergarten-cop2");
+      //add class to change size with css
+      imgWin2.addClass("images");
+      //hide pic from first question
+      $(".question3").hide();
+      //replaces question with victory
+      $(".question4").empty();
+      $(".question4").append(imgWin2);
+      //hides answers when 
+      $(".answers4").hide();
+      //question 4 animate
+      $("$.question5").animate({opacity: "5"});
+      //updates correct answers to html
+      $(".correct-answers").text(correctAnswers);
+      //updates unanswered
+      $(".un-answered").text(unAnswered);
+      console.log(correctAnswers);
+    });
+
+    //question4 incorrect
+    $(".incorrect-answer4").on("click", function () {
+      //adds to wrong answers
+      wrongAnswers++;
+      //subtracts from remaining questions
+      unAnswered--;
+      //creates losing img
+      var imgLose = $("<img>").attr("src", "wrong-answer.gif");
+      imgLose.addClass("images")
+      //hide pic from first question
+      $(".question3").hide();
+      //replaces question with defeat
+      $(".question4").empty();
+      $(".question4").append(imgLose);
+      //hides answers
+      $(".answers4").hide();
+      //shows question 3
+      $(".question5").animate({ opacity: "5" });
+      //updates wrong answers
+      $(".wrong-answers").text(wrongAnswers);
+      //updates unanswered
+      $(".un-answered").text(unAnswered);
+      console.log(wrongAnswers);
+    });
+
+  </script>
+
+</body>
+
+</html>
